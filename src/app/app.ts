@@ -2,15 +2,28 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+    value = 10;
+
+    // value = "Alex"
+
+    name: string | number = 'George Kurian';
+    age: number = 10;
+    isValid: boolean = true;
+
+    handleClick() {
+        let value;
+        value = 'Allu Arjun'
+        value = 10;
+        console.log(value);
+    }
+
+    sum(a: number, b: number){
+        console.log(a + b);
+    }
 }
