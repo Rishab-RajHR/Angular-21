@@ -1,16 +1,38 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+    handleClick() {
+       console.log('Button clicked!');
+    }
+
+    onTyping(event: any){
+        console.log("Typed", event.target.value);
+    }
+
+    onKeyUp(event: any) {
+        console.log("Key Up Event", event.key);
+    }
+
+    onHover(){
+        console.log("Hover Event");
+    }
+
+    onLeave(){
+        console.log("Leave Event");
+    }
+
+    onBlur() {
+       console.log("Blur Event");
+    }
+
+    onFocus() {
+        console.log("Focus Event");
+    }
 }
