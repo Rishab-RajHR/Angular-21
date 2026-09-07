@@ -1,16 +1,38 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+    count : number = 0;
+
+    // handleAdd(){
+    //   this.count++;
+    // }
+
+    // handleMinus(){
+    //    if(this.count > 0){
+    //       this.count--;
+    //    }
+    // }
+
+    // handleReset(){
+    //    this.count = 0;
+    // }
+
+    handle(value: string){
+         if(value === 'plus'){
+             this.count++;
+         }
+         else if(value === 'minus'){
+            this.count--;
+         }
+         else{
+            this.count = 0;
+         }
+    }
+
 }

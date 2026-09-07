@@ -1,6 +1,13 @@
-<h1>Alex Pandian</h1>
+<h1>Simple Counter App</h1>
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+<p class="count">{{ count }}</p>
+
+<div class="btns">
+   <!-- <button (click)="handleAdd()">+</button>
+   <button (click)="handleMinus()">-</button>
+   <button (click)="handleReset()" class="reset">Reset</button> -->
+
+   <button (click)="handle('plus')">+</button>
+   <button (click)="handle('minus')">-</button>
+   <button (click)="handle('reset')">Reset</button>
+</div>
