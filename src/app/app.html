@@ -1,6 +1,12 @@
-<h1>Alex Pandian</h1>
+<!-- @for (u of users; track u.name) {
+    <div>
+        <h4>{{u.name}}</h4>
+        <p>Age: {{u.age}}</p>
+    </div>
+} -->
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+
+@for (fruit of items; track $index; let i = $index) {
+    <p>{{fruit}}</p>
+    <button (click)="removeItem(i)">Delete</button>
+}
