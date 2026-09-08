@@ -1,6 +1,26 @@
-<h1>Alex Pandian</h1>
+<!-- @if (isLoggedIn){
+    <h1>Welcome Alex</h1>
+} @else {
+   <h2>Please Login</h2>
+} -->
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+<!--
+@if (marks >= 50){
+  <p>Pass</p>
+} @else {
+    <p>Fail</p>
+} -->
+<!--
+<button (click)="toggleBox()">Toggle</button>
+
+@if (showBox){
+    <div>This is a box</div>
+}-->
+
+<input (input)="updateAge($event.target.value)" placeholder="Enter Your Age">
+
+@if (age >= 18){
+   <p>Adult</p>
+} @else {
+    <p>Minor</p>
+}

@@ -1,16 +1,25 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+   isLoggedIn = false;
+
+   marks = 65;
+
+   showBox = true;
+
+   toggleBox(){
+      this.showBox = !this.showBox;
+   }
+
+   age = 0;
+
+   updateAge(val: string) {
+      this.age = Number(val);
+   }
 }
