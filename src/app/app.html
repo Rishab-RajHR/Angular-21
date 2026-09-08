@@ -1,6 +1,15 @@
-<h1>Alex Pandian</h1>
+<input (input)="updateName($event.target.value)" placeholder="Enter Name">
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+<p> Your Name: {{name}}</p>
+
+<input (input)="city=$event.target.value" placeholder="Enter City">
+
+<p>Your City: {{city}}</p>
+
+
+<!-- Reference Variable -->
+<input #userInput placeholder="Enter Email">
+
+<button (click)="getEmail(userInput.value)">Get Email</button>
+
+<p>Your Email: {{email}}</p>
