@@ -1,16 +1,19 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
+  // template: `<h2 class="box">Welcome to the App!</h2>`,
+  // styles: [`
+  //     .box{
+  //        background-color: red;
+  //        padding: 20px;
+  //        text-align: center;
+  //     }
+  //   `]
   templateUrl: './app.html',
+  styleUrls: ['./app.css', './buttons.css']
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+
 }
