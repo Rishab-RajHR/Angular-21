@@ -1,6 +1,23 @@
-<h1>Alex Pandian</h1>
+<h1>{{lName |uppercase }}</h1>
+<h1>{{uName |lowercase }}</h1>
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+<p>Short Date : {{ today | date:'short' }}</p>
+<p>Full Date : {{ today | date:'fullDate' }}</p>
+<p>Custom Date : {{ today | date:'dd/MM/yyyy' }}</p>
+
+
+ <!-- Currency Pipe -->
+
+<p>INR : {{amount | currency: 'INR'}}</p>
+<p>USD : {{amount | currency: 'USD'}}</p>
+<p>EUR : {{amount | currency: 'EUR'}}</p>
+<p>Custom format : {{amount | currency: 'INR': 'symbol':'1.0-0'}}</p>
+
+
+ <!-- Percentage -->
+
+<p>{{per | percent}}</p>
+
+<!-- JSON -->
+
+<p>{{user | json}}</p>

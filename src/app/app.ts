@@ -1,16 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+   lName = "alex"
+   uName = "ALEX"
+
+   today = new Date();
+
+   amount = 2500;
+
+   per = 0.35;
+
+   user = {
+      name: 'Mohit',
+      age: 25
+   }
 }
