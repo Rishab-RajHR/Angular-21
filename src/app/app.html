@@ -1,6 +1,8 @@
-<h1>Alex Pandian</h1>
+<h1>{{count()}}</h1>
 
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
+<h1>{{users().name}}. {{users().age}}</h1>
+
+<h3>Numbers: {{numbers()}}</h3>
+<button (click)="directUpdate()">Direct Update</button>
+
+<button (click)="addNumber()">Add Number</button>
