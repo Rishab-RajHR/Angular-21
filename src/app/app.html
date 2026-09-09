@@ -1,20 +1,24 @@
-<!-- <input [(ngModel)]="username" placeholder="Enter your name" />
+<h2>Todo App</h2>
 
-<p>{{username}}</p> -->
-<!--
-<input [value]="name()" (input)="name.set($event.target.value)"/>
+<input placeholder="Write Something..."
+    [value]="newTodo()"
+    (input)="newTodo.set($event.target.value)"
+>
 
-<p>{{name()}}</p> -->
-
-<input [value]="user().name" (input)="updateName($event.target.value)" placeholder="Name"/>
-
-<br><br>
-
-<p> Update Name : {{user().name}}</p>
+<button (click)="addTodo()">Add</button>
 
 <hr>
 
-<p> Age: {{user().age}}</p>
-<button (click)="updateAge()">Increase Age</button>
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            <span>{{ $index + 1 }}</span>
 
+            <span (click)="toggleTodo($index)" [style.text-decoration]="todo.done ? 'line-through' : 'none'">
+                {{ todo.text }}
+            </span>
 
+            <button (click)="deleteTodo($index)">Delete</button>
+        </li>
+    }
+</ul>
