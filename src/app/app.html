@@ -1,10 +1,13 @@
-<!-- <h1>{{count()}}</h1>
-
-<h2>{{doubleCount()}}</h2>
-<h2>{{tripleCount()}}</h2>
+<!-- <h1>Increment Button</h1>
 
 <button (click)="increment()">Increment</button> -->
 
-<!-- <h1>{{fullName()}}</h1> -->
+<!-- <h1>Toggle Button</h1> -->
 
-<h1>{{total()}}</h1>
+<!-- <button (click)="toggle()">Toggle</button> -->
+
+<button (click)="showMessage()">Save</button>
+
+@if (message()) {
+    <p>{{message()}}</p>
+}
