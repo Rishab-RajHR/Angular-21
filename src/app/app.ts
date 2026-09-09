@@ -1,16 +1,17 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { PipeShortNamePipe } from './pipe/pipe-short-name-pipe';
+import { ConvertPipe } from './pipe/convert-pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [PipeShortNamePipe,ConvertPipe,CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+   fullName = "Alex Pandian"
+
+   usd = 10;
+   usdToInr = 85;
 }
