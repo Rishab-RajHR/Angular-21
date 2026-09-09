@@ -1,16 +1,26 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-tut');
-  name = "Angular Tutorial";
-  username = "TovinoThomas";
-   isAdmin = true;
-   count = 3;
+   count = signal(0);  // Signal Created
+   val = 20;
+
+  //  count.update(c => c + 1);  // Signal Updated
+
+  // items.mutated(a => a.push(4));  // Signal Mutated
+
+  increment(){
+      this.count.update(c => c + 1);
+  }
+  decrement(){
+     this.count.update(c => c - 1);
+  }
+  reset(){
+     this.count.set(0);
+  }
 }
