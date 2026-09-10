@@ -1,20 +1,8 @@
-<!-- <input [(ngModel)]="username" placeholder="Enter your name" />
+<app-card
+    [title]="'Angular Course'"
+    [description]="'Learn Angular 21 step by step'"
+    >
 
-<p>{{username}}</p> -->
-<!--
-<input [value]="name()" (input)="name.set($event.target.value)"/>
-
-<p>{{name()}}</p> -->
-
-<input [value]="user().name" (input)="updateName($event.target.value)" placeholder="Name"/>
-
-<br><br>
-
-<p> Update Name : {{user().name}}</p>
-
-<hr>
-
-<p> Age: {{user().age}}</p>
-<button (click)="updateAge()">Increase Age</button>
-
-
+    <p>This is Coming from Parent</p>
+    <button>Click Me</button>
+</app-card>
