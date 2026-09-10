@@ -1,20 +1,38 @@
-<!-- <input [(ngModel)]="username" placeholder="Enter your name" />
+<!-- <h1>{{ count() }}</h1>
 
-<p>{{username}}</p> -->
-<!--
-<input [value]="name()" (input)="name.set($event.target.value)"/>
-
-<p>{{name()}}</p> -->
-
-<input [value]="user().name" (input)="updateName($event.target.value)" placeholder="Name"/>
-
-<br><br>
-
-<p> Update Name : {{user().name}}</p>
-
-<hr>
-
-<p> Age: {{user().age}}</p>
-<button (click)="updateAge()">Increase Age</button>
+@if (isLoggedIn()){
+    <p>Welcome Alex</p>
+} @else {
+    <p>Welcome User</p>
+}
 
 
+<button (click)="isLoggedIn.set(true)">Login</button>
+<button (click)="isLoggedIn.set(false)">Logout</button>
+
+<ul>
+    @for (item of items(); track $index) {
+         <li>{{ item }}</li>
+    }
+</ul>
+
+<button (click)="addItem()">Add Item</button> -->
+
+<h1> User Dashboard</h1>
+
+<button (click)="makeUser()">User</button> <br> <br>
+<button (click)="makeAdmin()">Admin</button>
+
+@if (role() === 'admin'){
+   <p>Welcome Admin</p>
+} @else {
+    <p>Normal User</p>
+}
+
+<h3>Available Features</h3>
+
+<ul>
+    @for (feature of features(); track $index) {
+        <li>{{ feature }}</li>
+    }
+</ul>

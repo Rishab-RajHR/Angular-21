@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
 
 @Component({
   imports: [],
@@ -8,19 +7,44 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
+  //  count = signal(0);
+  //  isLoggedIn = signal(false);
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
+  //  items = signal<string[]>([
+  //      "Angular",
+  //      "React",
+  //      "Vue"
+  //  ])
 
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
+  //  addItem() {
+  //     this.items.update( items => [...items, "HTML"] );
+  //  }
 
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
-  }
+   role = signal< 'admin' | 'user' >('user');
+
+   features = signal<string[]>([
+      "Dashboard",
+      "Profile",
+      "Settings"
+   ]);
+
+   makeAdmin() {
+      this.role.set('admin');
+      this.features.set([
+        "Dashboard",
+        "Profile",
+        "Settings",
+        "Admin Panel",
+        "User Management"
+      ]);
+   }
+
+    makeUser() {
+      this.role.set('user');
+      this.features.set([
+        "Dashboard",
+        "Profile",
+        "Settings"
+      ]);
+   }
 }
