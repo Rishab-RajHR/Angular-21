@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+// import { CounterStore } from './core/store/counter';
+import { UserStore } from './core/store/user';
 
 @Component({
   imports: [],
@@ -8,19 +9,6 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
-
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
-
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
-
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
-  }
+  //  constructor(public counterStore: CounterStore) {}
+  constructor(public userStore: UserStore) {}
 }

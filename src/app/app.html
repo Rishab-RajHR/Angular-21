@@ -1,20 +1,19 @@
-<!-- <input [(ngModel)]="username" placeholder="Enter your name" />
+<!-- <h2>Counter App</h2>
 
-<p>{{username}}</p> -->
-<!--
-<input [value]="name()" (input)="name.set($event.target.value)"/>
+<p>Counter Count: {{ counterStore.count() }}</p>
 
-<p>{{name()}}</p> -->
+<button (click)="counterStore.increment()">+</button>
+<button (click)="counterStore.decrement()">-</button>
+<button (click)="counterStore.reset()">Reset</button> -->
 
-<input [value]="user().name" (input)="updateName($event.target.value)" placeholder="Name"/>
+<h2> Application </h2>
 
-<br><br>
-
-<p> Update Name : {{user().name}}</p>
-
-<hr>
-
-<p> Age: {{user().age}}</p>
-<button (click)="updateAge()">Increase Age</button>
-
-
+@if ( userStore.user()){
+    <p> Welcome {{userStore.user()!.name}}</p>
+    @if (userStore.isAdmin()){
+        <p>Admin Access</p>
+    }
+    <button (click)="userStore.logout()">Logout</button>
+} @else {
+    <button (click)="userStore.login('Mohit','admin')">Login as Admin</button>
+}
