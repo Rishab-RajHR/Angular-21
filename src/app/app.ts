@@ -1,50 +1,17 @@
 import { Component, signal } from '@angular/core';
+import { Child } from './child/child';
 
 @Component({
-  imports: [],
+  imports: [Child],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  count = signal(0);
-  //  isLoggedIn = signal(false);
+  //  username: string = 'Tovino Thomas';
+  message: string = '';
 
-  //  items = signal<string[]>([
-  //      "Angular",
-  //      "React",
-  //      "Vue"
-  //  ])
-
-  //  addItem() {
-  //     this.items.update( items => [...items, "HTML"] );
-  //  }
-
-   role = signal< 'admin' | 'user' >('user');
-
-   features = signal<string[]>([
-      "Dashboard",
-      "Profile",
-      "Settings"
-   ]);
-
-   makeAdmin() {
-      this.role.set('admin');
-      this.features.set([
-        "Dashboard",
-        "Profile",
-        "Settings",
-        "Admin Panel",
-        "User Management"
-      ]);
-   }
-
-    makeUser() {
-      this.role.set('user');
-      this.features.set([
-        "Dashboard",
-        "Profile",
-        "Settings"
-      ]);
-   }
+  onMessage(msg: string){
+     this.message = msg;
+  }
 }
