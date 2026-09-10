@@ -1,26 +1,18 @@
 import { Component, signal } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { FormField } from './form-field/form-field';
 
 @Component({
-  imports: [],
+  imports: [FormField],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
+  email = '';
 
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
-
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
+  onEmailChange(value: string){
+      console.log('Email:', value);
+      this.email = value;
   }
 }
