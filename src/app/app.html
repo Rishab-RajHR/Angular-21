@@ -1,20 +1,39 @@
-<!-- <input [(ngModel)]="username" placeholder="Enter your name" />
+<!-- <h2> Template-Driven Form + Signal </h2>
 
-<p>{{username}}</p> -->
-<!--
-<input [value]="name()" (input)="name.set($event.target.value)"/>
-
-<p>{{name()}}</p> -->
-
-<input [value]="user().name" (input)="updateName($event.target.value)" placeholder="Name"/>
+<input
+[(ngModel)]="name"
+(ngModelChange)="name.set($event)"
+placeholder="Enter your name"
+>
 
 <br><br>
 
-<p> Update Name : {{user().name}}</p>
+<input
+[(ngModel)]="email"
+(ngModelChange)="email.set($event)"
+placeholder="Enter your email"
+>
 
-<hr>
+<br><br>
 
-<p> Age: {{user().age}}</p>
-<button (click)="updateAge()">Increase Age</button>
+<button (click)="submitForm()">Submit</button>
 
+<p>Name: {{name()}}</p>
+<p>Email: {{email()}}</p> -->
 
+<h2>Signal Reactive Form</h2>
+
+<form [formGroup]="form">
+    <input formControlName="name" placeholder="Name">
+    <br><br>
+    <input formControlName="email" placeholder="Email">
+    <br><br>
+</form>
+
+<button (click)="submitForm()">Submit</button>
+
+<!-- <p>Name: {{form.get('name')?.value}}</p>
+<p>Name: {{form.get('email')?.value}}</p> -->
+
+<p>Signal Value</p>
+<pre>{{userSignal() | json}}</pre>

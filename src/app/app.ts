@@ -1,26 +1,39 @@
-import { Component, signal } from '@angular/core';
 // import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [],
+  imports: [ReactiveFormsModule, CommonModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
+    // name = signal('');
+    // email = signal('');
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
+    // submitForm(){
+    //    console.log(`Name: ${this.name()}, Email: ${this.email()}`);
+    // }
 
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
+    userSignal = signal({ name: '', email: '' });
 
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
-  }
+    form: any;
+
+    constructor(private fb: FormBuilder) {
+        this.form = this.fb.group({
+            name: [''],
+            email: ['']
+        })
+
+        this.form.valueChanges.subscribe((value: any) => {
+            this.userSignal.set(value);
+        });
+    }
+
+    submitForm() {
+       console.log(`Name: ${this.userSignal().name}, Email: ${this.userSignal()}`);
+    }
+
 }
