@@ -1,26 +1,14 @@
 import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header-component/header-component';
 // import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [],
+  imports: [RouterOutlet,HeaderComponent],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
-
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
-
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
-  }
 }
