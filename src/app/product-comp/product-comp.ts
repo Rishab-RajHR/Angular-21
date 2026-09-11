@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-comp.html',
 })
 export class ProductComp {
-     productId: string;
+     productId!: string;
 
      constructor( private route: ActivatedRoute) {
         // this.productId = this.route.snapshot.paramMap.get('id') || '';
