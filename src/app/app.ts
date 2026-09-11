@@ -1,26 +1,21 @@
 import { Component, signal } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { Child } from './child/child';
 
 @Component({
-  imports: [],
+  imports: [Child],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
+    title = signal("Hello from App Component");
+    show = signal(true);
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
+    changeTitle(){
+        this.title.set("Title Changed!");
+    }
 
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
-
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
-  }
+    toggle(){
+      this.show.set(!this.show());
+    }
 }
