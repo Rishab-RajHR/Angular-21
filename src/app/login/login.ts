@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Auth } from '../auth';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,10 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: './login.html',
 })
 export class Login {
-    constructor( private auth: Auth, private router: Router) {}
-
-    Login() {
-        this.auth.login();
-        this.router.navigate(['/dashboard']);
+    constructor(private router: Router) {}
+    login() {
+        this.router.navigate(['dashboard']);
     }
 }

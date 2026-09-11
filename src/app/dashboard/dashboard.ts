@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.css',
   templateUrl: './dashboard.html',
 })
-export class Dashboard {}
+export class Dashboard {
+    constructor(private router: Router) {}
+
+    openProduct(){
+        this.router.navigate(['product', 101]);
+    }
+    goToLogin(){
+       this.router.navigateByUrl('/login');
+    }
+}
