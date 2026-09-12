@@ -1,26 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { form, Field } from '@angular/forms/signals';
 
 @Component({
-  imports: [],
+  imports: [CommonModule, Field],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  //  username = "Alex";
-  // name = signal('George');
+  loginModel = signal({
+    email: '',
+    password: ''
+  });
 
-  user = signal<{ name: string; age: number }>({
-       name: 'Alex',
-       age: 23
-  })
+  loginForm = form(this.loginModel);
 
-  updateName(value: string) {
-      this.user.update(user => ({ ...user, name: value }));
-  }
-
-  updateAge() {
-      this.user.update(user => ({ ...user, age: user.age+1 }));
+  submit() {
+    console.log(this.loginModel());
   }
 }
