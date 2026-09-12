@@ -17,6 +17,6 @@ export class App {
   loginForm = form(this.loginModel);
 
   submit() {
-    console.log(this.loginModel());
+    console.log(this.loginModel());  // This is about
   }
 }
