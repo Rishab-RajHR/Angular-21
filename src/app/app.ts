@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { User } from './user';
-import { UserService } from './user-service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { UserService } from './services/user-service';
+import { User } from './models/user';
 
 @Component({
   imports: [],
@@ -12,5 +12,5 @@ import { toSignal } from '@angular/core/rxjs-interop';
 export class App {
      userService = inject(UserService);
 
-     users : any = toSignal( this.userService.getUsers());
+     users : any = toSignal<User[]>( this.userService.getUsers());
 }
