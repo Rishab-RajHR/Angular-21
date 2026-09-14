@@ -1,13 +1,24 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+   "users": [
+       {
+          "id": 1,
+          "name": "Alice",
+          "email": "alice@gmail.com"
+       },
+       {
+          "id": 2,
+          "name": "Mohit",
+          "email": "mohit12@gmail.com"
+       },
+       {
+          "id": 3,
+          "name": "Somu",
+          "email": "somu32@gmail.com"
+       },
+       {
+          "id": 4,
+          "name": "Alex",
+          "email": "alex56@gmail.com"
+       }
+   ]
 }

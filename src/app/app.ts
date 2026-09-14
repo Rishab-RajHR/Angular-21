@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { User } from './user';
+import { UserService } from './user-service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   imports: [],
@@ -8,13 +10,7 @@ import { User } from './user';
   templateUrl: './app.html',
 })
 export class App {
-    users: any[] = [];
+     userService = inject(UserService);
 
-    constructor(private userService: User){}
-
-    ngOnInit(){
-       this.userService.getUsers().subscribe((data: any)=>{
-           this.users = data;
-       })
-    }
+     users : any = toSignal( this.userService.getUsers());
 }
