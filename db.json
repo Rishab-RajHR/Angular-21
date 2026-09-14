@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "Daniel",
+      "email": "daniel12@gmail.com",
+      "isActive": false,
+      "id": "1"
+    },
+    {
+      "name": "Allice",
+      "email": "",
+      "isActive": false,
+      "id": "kRyp0XmVDXU"
+    },
+    {
+      "name": "Alice",
+      "email": "",
+      "isActive": false,
+      "id": "jupFAXKjLLo"
+    },
+    {
+      "name": "Tovino",
+      "email": "tovino12@gmail.com",
+      "isActive": false,
+      "id": "AyGSzYSTDJw"
+    },
+    {
+      "name": "Basil ",
+      "email": "basil12@gmail.com",
+      "isActive": false,
+      "id": "wp49b0YXFC8"
+    },
+    {
+      "name": "Bellamkonda Srinivas",
+      "email": "bellamkonda12@gmail.com",
+      "isActive": true,
+      "id": "G0EIClaUNkQ"
+    },
+    {
+      "name": "Navin Pauly",
+      "email": "navin12@gmail.com",
+      "isActive": true,
+      "id": "0s9Zoyk37PI"
+    },
+    {
+      "name": "Tillu",
+      "email": "tilu12@gmail.com",
+      "isActive": false,
+      "id": "7wzEV7uwJjw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
