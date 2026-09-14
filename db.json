@@ -1,20 +1,6 @@
 {
   "users": [
     {
-      "name": "Daniel",
-      "email": "daniel12@gmail.com",
-      "isActive": false,
-      "id": "1",
-      "status": true
-    },
-    {
-      "name": "Allice",
-      "email": "",
-      "isActive": false,
-      "id": "kRyp0XmVDXU",
-      "status": true
-    },
-    {
       "name": "Alice",
       "email": "",
       "isActive": false,

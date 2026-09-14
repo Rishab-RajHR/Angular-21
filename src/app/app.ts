@@ -80,6 +80,18 @@ export class App {
        })
     }
 
+    // Delete a User
+    deleteUser( user: User){
+        const confirmDelete = confirm(`Are you sure you want to delete ${user.name}?`);
+        if( !confirmDelete ) return;
+
+        this.userService.deleteuser(user.id!).subscribe(()=>{
+            this.users.update( list =>
+                list.filter( u => u.id !== user.id )
+            )
+        })
+    }
+
     afterSave(){
           this.loadUsers();
           this.name.set('');
