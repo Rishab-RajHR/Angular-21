@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Alice",
-      "email": "alice@gmail.com",
-      "isActive": true
+      "name": "Daniel",
+      "email": "daniel12@gmail.com",
+      "isActive": false,
+      "id": "1"
     },
     {
       "name": "Allice",
@@ -31,9 +31,9 @@
       "id": "wp49b0YXFC8"
     },
     {
-      "name": "George",
-      "email": "george11@gmail.com",
-      "isActive": false,
+      "name": "Bellamkonda Srinivas",
+      "email": "bellamkonda12@gmail.com",
+      "isActive": true,
       "id": "G0EIClaUNkQ"
     },
     {
@@ -41,6 +41,12 @@
       "email": "navin12@gmail.com",
       "isActive": true,
       "id": "0s9Zoyk37PI"
+    },
+    {
+      "name": "Tillu",
+      "email": "tilu12@gmail.com",
+      "isActive": false,
+      "id": "7wzEV7uwJjw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
