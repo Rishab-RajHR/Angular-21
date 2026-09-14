@@ -4,13 +4,15 @@
       "name": "Daniel",
       "email": "daniel12@gmail.com",
       "isActive": false,
-      "id": "1"
+      "id": "1",
+      "status": true
     },
     {
       "name": "Allice",
       "email": "",
       "isActive": false,
-      "id": "kRyp0XmVDXU"
+      "id": "kRyp0XmVDXU",
+      "status": true
     },
     {
       "name": "Alice",
@@ -33,7 +35,7 @@
     {
       "name": "Bellamkonda Srinivas",
       "email": "bellamkonda12@gmail.com",
-      "isActive": true,
+      "isActive": false,
       "id": "G0EIClaUNkQ"
     },
     {
