@@ -1,16 +1,14 @@
-import { Component, inject, signal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Component } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
-  imports: [],
+  imports: [MatFormFieldModule, MatInputModule, MatIconModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-    name = signal("AP");
 
-    submitForm(){
-       alert(`User ${this.name()} saved!`);
-    }
 }

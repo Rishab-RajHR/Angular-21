@@ -1,15 +1,4 @@
-<div  class="p-10">
-    <input
-   class="border p-2 rounded w-full mb-2"
-   [value]="name()"
-   (input)="name.set($event.target.value)"
-/>
-
-<button
-  class="bg-blue-500 text-white p-2 rounded"
-  (click)="submitForm()"
->
-   Submit
-</button>
-
-</div>
+<mat-form-field appearance="outline">
+     <mat-label>Your Name</mat-label>
+     <input matInput placeholder="Enter your name">
+</mat-form-field>
