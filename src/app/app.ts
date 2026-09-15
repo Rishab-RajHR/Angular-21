@@ -8,9 +8,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
   templateUrl: './app.html',
 })
 export class App {
-   name = signal('Alex Pandian');
+    name = signal("AP");
 
-   submitForm(){
-      alert(`User ${this.name()} saved successfully!`);
-   }
+    submitForm(){
+       alert(`User ${this.name()} saved!`);
+    }
 }
